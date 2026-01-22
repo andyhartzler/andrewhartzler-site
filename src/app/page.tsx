@@ -1,65 +1,291 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const pressFeatures = [
+  {
+    outlet: "CNN",
+    title: "Featured guest on national coverage",
+    url: "https://www.cnn.com",
+  },
+  {
+    outlet: "NBC News",
+    title: "Advocacy and policy commentary",
+    url: "https://www.nbcnews.com",
+  },
+  {
+    outlet: "People Magazine",
+    title: "Profile feature",
+    url: "https://www.people.com",
+  },
+  {
+    outlet: "The Guardian",
+    title: "Op-ed contributor",
+    url: "https://www.theguardian.com",
+  },
+  {
+    outlet: "MSNBC",
+    title: "The Last Word with Lawrence O'Donnell",
+    url: "https://www.msnbc.com",
+  },
+  {
+    outlet: "Politico",
+    title: "Policy and education coverage",
+    url: "https://www.politico.com",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Background gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted" />
+        <div className="absolute top-1/4 -right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
+            Activist & Advocate
+          </p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Andrew Douglas
+            <br />
+            <span className="text-muted-foreground">
+              Hartzler
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+            Advocate, organizer, and graduate student in clinical psychology based in Kansas City.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="#work"
+              className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              See My Work
+            </Link>
+            <Link
+              href="/contact"
+              className="px-8 py-3 border border-border hover:bg-muted rounded-full font-medium transition-colors"
             >
-              Learning
-            </a>{" "}
-            center.
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg
+            className="w-6 h-6 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              About Me
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+              I&apos;m currently pursuing my master&apos;s degree in clinical psychology while working on advocacy and organizing projects. Based in Kansas City, I&apos;m passionate about creating meaningful change through education, policy, and community building.
+            </p>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              My work spans political organizing, public speaking, and media engagement. I&apos;ve been fortunate to have my voice amplified through major news outlets and to collaborate with organizations working toward a more just society.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Section */}
+      <section id="work" className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What I Do
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Combining education, advocacy, and organizing to drive meaningful impact.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Graduate Studies Card */}
+            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Clinical Psychology
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Pursuing graduate studies in clinical psychology, with a focus on understanding and supporting mental health through research and practice.
+              </p>
+            </div>
+
+            {/* Advocacy Card */}
+            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Advocacy & Policy
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Working on civil rights issues and education policy reform. Part of ongoing efforts challenging discriminatory practices in higher education.
+              </p>
+              <a
+                href="https://thereap.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-primary text-sm mt-4 hover:underline"
+              >
+                Learn about REAP
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Political Organizing Card */}
+            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <svg
+                  className="w-6 h-6 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">
+                Political Organizing
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Active with Missouri Young Democrats, working to elect progressive candidates and shape policies at the state and local level.
+              </p>
+              <a
+                href="https://moyoungdemocrats.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-primary text-sm mt-4 hover:underline"
+              >
+                Get involved
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Press Section */}
+      <section id="press" className="py-24 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Featured In
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              My work has been covered by major outlets nationwide.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {pressFeatures.map((press, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover:scale-[1.02] cursor-pointer group"
+              >
+                <p className="text-2xl font-bold text-primary mb-1">
+                  {press.outlet}
+                </p>
+                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  {press.title}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-muted-foreground mt-8 text-sm">
+            Also featured in: The Advocate, Buzzfeed, Business Insider,
+            Telemundo, Kansas City Star, and more.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Let&apos;s Connect
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+            Interested in collaborating, speaking engagements, or media inquiries? I&apos;d love to hear from you.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Get in Touch
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { SparklesCore } from "@/components/SparklesCore";
 
 const pressFeatures = [
   {
@@ -38,10 +41,22 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted" />
-        <div className="absolute top-1/4 -right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        {/* Sparkles Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <SparklesCore
+            id="hero-sparkles"
+            background="transparent"
+            minSize={0.4}
+            maxSize={1.4}
+            particleDensity={80}
+            className="w-full h-full"
+            particleColor="#71717a"
+            speed={2}
+          />
+        </div>
+
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background pointer-events-none" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
@@ -74,7 +89,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
           <svg
             className="w-6 h-6 text-muted-foreground"
             fill="none"

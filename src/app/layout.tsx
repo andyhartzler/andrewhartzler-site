@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Douglas Hartzler | Activist & Advocate",
+  title: "Andrew Douglas Hartzler | Strategist, Organizer, Creator",
   description:
-    "Andrew Douglas Hartzler is an activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
+    "Andrew Douglas Hartzler is a strategist, organizer, creator, and MPA graduate student at UMKC based in Kansas City.",
   keywords: [
     "activist",
     "advocate",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Andrew Douglas Hartzler" }],
   openGraph: {
-    title: "Andrew Douglas Hartzler | Activist & Advocate",
+    title: "Andrew Douglas Hartzler | Strategist, Organizer, Creator",
     description:
-      "Activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
+      "Strategist, organizer, creator, and MPA graduate student at UMKC based in Kansas City.",
     url: "https://andrewhartzler.com",
     siteName: "Andrew Douglas Hartzler",
     locale: "en_US",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Andrew Douglas Hartzler | Activist & Advocate",
+    title: "Andrew Douglas Hartzler | Strategist, Organizer, Creator",
     description:
-      "Activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
+      "Strategist, organizer, creator, and MPA graduate student at UMKC based in Kansas City.",
     creator: "@andyhartzler",
   },
 };

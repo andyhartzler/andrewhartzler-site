@@ -7,7 +7,7 @@ export default function Home() {
         <section className="min-h-screen flex items-center justify-center relative">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <p className="text-zinc-400 font-medium mb-4 tracking-wide uppercase text-sm">
-              Activist & Advocate
+              Strategist, Organizer, Creator
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
               <span className="md:whitespace-nowrap">Andrew Douglas Hartzler</span>

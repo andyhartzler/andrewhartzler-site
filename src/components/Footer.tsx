@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Andrew Hartzler</h3>
             <p className="text-zinc-400 text-sm leading-relaxed">
-              Activist, advocate, and MPA graduate student at UMKC
+              Strategist, organizer, creator, and MPA graduate student at UMKC
               based in Kansas City.
             </p>
           </div>

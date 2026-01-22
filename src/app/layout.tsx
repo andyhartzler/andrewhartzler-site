@@ -17,11 +17,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Andrew Douglas Hartzler | Activist & Advocate",
   description:
-    "Andrew Douglas Hartzler is an activist, advocate, and graduate student in clinical psychology based in Kansas City.",
+    "Andrew Douglas Hartzler is an activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
   keywords: [
     "activist",
     "advocate",
-    "clinical psychology",
+    "public administration",
+    "UMKC",
     "political organizing",
     "Missouri Young Democrats",
     "public speaker",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Andrew Douglas Hartzler | Activist & Advocate",
     description:
-      "Activist, advocate, and graduate student in clinical psychology based in Kansas City.",
+      "Activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
     url: "https://andrewhartzler.com",
     siteName: "Andrew Douglas Hartzler",
     locale: "en_US",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Andrew Douglas Hartzler | Activist & Advocate",
     description:
-      "Activist, advocate, and graduate student in clinical psychology based in Kansas City.",
+      "Activist, advocate, and MPA graduate student at UMKC based in Kansas City.",
     creator: "@andyhartzler",
   },
 };

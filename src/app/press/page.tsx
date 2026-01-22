@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 
 const pressItems = [
   {
+    publication: "MSNBC",
+    title: "A class-action lawsuit seeks to bar religious schools from collecting federal funds if they discriminate against LGBTQ students",
+    url: "https://www.msnbc.com/ayman-mohyeldin/watch/a-class-action-lawsuit-seeks-to-bar-religious-schools-from-collecting-federals-funds-if-they-discriminate-against-lgbtq-students-142405189656",
+    logo: "/logos/msnbc.svg",
+  },
+  {
+    publication: "Politico",
+    title: "Andrew Hartzler Wasn't Allowed To Be Gay on Campus. So He's Suing",
+    url: "https://www.politico.com/news/magazine/2022/05/20/religious-universities-lgbtq-students-title-ix-lawsuit-00033373",
+    logo: "/logos/politico.svg",
+  },
+  {
     publication: "Uncloseted Media",
     title: "Kristen Waggoner, The Woman Who Helped Overturn Roe v. Wade, Is Coming For LGBTQ Rights",
     url: "https://www.unclosetedmedia.com/p/kristen-waggoner-the-woman-who-helped",
@@ -118,22 +130,10 @@ const pressItems = [
     logo: "/logos/advocate.svg",
   },
   {
-    publication: "MSNBC",
-    title: "A class-action lawsuit seeks to bar religious schools from collecting federal funds if they discriminate against LGBTQ students",
-    url: "https://www.msnbc.com/ayman-mohyeldin/watch/a-class-action-lawsuit-seeks-to-bar-religious-schools-from-collecting-federals-funds-if-they-discriminate-against-lgbtq-students-142405189656",
-    logo: "/logos/msnbc.svg",
-  },
-  {
     publication: "The Advocate",
     title: "A Gay Oral Roberts University Graduate's Painful Story",
     url: "https://www.advocate.com/commentary/2022/5/26/gay-oral-roberts-university-graduates-painful-story",
     logo: "/logos/advocate.svg",
-  },
-  {
-    publication: "Politico",
-    title: "Andrew Hartzler Wasn't Allowed To Be Gay on Campus. So He's Suing",
-    url: "https://www.politico.com/news/magazine/2022/05/20/religious-universities-lgbtq-students-title-ix-lawsuit-00033373",
-    logo: "/logos/politico.svg",
   },
 ];
 

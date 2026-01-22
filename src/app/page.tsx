@@ -1,27 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { SparklesCore } from "@/components/SparklesCore";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white relative">
-      {/* Full-page Sparkles Background */}
-      <div className="fixed inset-0 w-full h-full z-0">
-        <SparklesCore
-          id="fullpage-sparkles"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={80}
-          className="w-full h-full"
-          particleColor="#ffffff"
-          speed={3}
-        />
-      </div>
-
-      {/* Content wrapper */}
-      <div className="relative z-10">
+    <main className="min-h-screen text-white relative">
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center relative">
           <div className="max-w-5xl mx-auto px-6 text-center">
@@ -144,7 +125,7 @@ export default function Home() {
                   Working on civil rights issues and education policy reform. Part of ongoing efforts challenging discriminatory practices in higher education.
                 </p>
                 <a
-                  href="https://thereap.org"
+                  href="https://web.archive.org/web/20250417073403/https://www.thereap.org/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-white text-sm mt-4 hover:underline"
@@ -270,7 +251,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-      </div>
     </main>
   );
 }

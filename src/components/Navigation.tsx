@@ -7,39 +7,39 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-lg font-semibold tracking-tight hover:text-muted-foreground transition-colors"
+            className="text-lg font-semibold tracking-tight text-white hover:text-zinc-300 transition-colors"
           >
-            Andrew Hartzler
+            Home
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="/#about"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
               About
             </Link>
             <Link
               href="/#advocacy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
               Advocacy
             </Link>
             <Link
               href="/press"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm text-zinc-400 hover:text-white transition-colors"
             >
               Press
             </Link>
             <Link
               href="/contact"
-              className="text-sm px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full transition-colors"
+              className="text-sm px-4 py-2 bg-white hover:bg-zinc-200 text-black rounded-full transition-colors"
             >
               Contact
             </Link>
@@ -47,7 +47,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -78,32 +78,32 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 bg-black/90 backdrop-blur-sm -mx-6 px-6">
             <div className="flex flex-col gap-4">
               <Link
                 href="/#about"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               <Link
                 href="/#advocacy"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Advocacy
               </Link>
               <Link
                 href="/press"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Press
               </Link>
               <Link
                 href="/contact"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact

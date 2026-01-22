@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-muted/50">
+    <footer className="bg-transparent">
       <div className="max-w-6xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Andrew Hartzler</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <h3 className="text-lg font-semibold mb-4 text-white">Andrew Hartzler</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">
               Activist, advocate, and MPA graduate student at UMKC
               based in Kansas City.
             </p>
@@ -16,31 +16,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 mb-4">
               Quick Links
             </h4>
             <div className="flex flex-col gap-2">
               <Link
                 href="/#about"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/#advocacy"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 Advocacy
               </Link>
               <Link
-                href="/#press"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                href="/press"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 Press
               </Link>
               <Link
                 href="/contact"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 Contact
               </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-zinc-500 mb-4">
               Connect
             </h4>
             <div className="flex gap-4">
@@ -57,7 +57,7 @@ export default function Footer() {
                 href="https://instagram.com/andrewhartzler"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ export default function Footer() {
                 href="https://tiktok.com/@andrewhartzler"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="TikTok"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -79,7 +79,7 @@ export default function Footer() {
                 href="https://twitter.com/andyhartzler"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="X (Twitter)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:andrew@hartzler.us"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-zinc-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
                 <svg
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="mt-12 pt-8 text-center text-sm text-zinc-500">
           <p>&copy; {new Date().getFullYear()} Andrew Douglas Hartzler. All rights reserved.</p>
         </div>
       </div>

@@ -90,7 +90,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 100,
+                  distance: 150,
                   duration: 0.4,
                 },
               },
@@ -125,7 +125,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               color: {
-                value: particleColor || "#000000",
+                value: particleColor || "#ffffff",
                 animation: {
                   h: {
                     count: 0,
@@ -233,17 +233,17 @@ export const SparklesCore = (props: ParticlesProps) => {
                   mode: "delete",
                   value: 0,
                 },
-                value: particleDensity || 100,
+                value: particleDensity || 120,
               },
               opacity: {
                 value: {
                   min: 0.1,
-                  max: 0.5,
+                  max: 1,
                 },
                 animation: {
                   count: 0,
                   enable: true,
-                  speed: speed || 3,
+                  speed: speed || 4,
                   decay: 0,
                   delay: 0,
                   sync: false,
@@ -273,7 +273,7 @@ export const SparklesCore = (props: ParticlesProps) => {
               size: {
                 value: {
                   min: minSize || 1,
-                  max: maxSize || 2,
+                  max: maxSize || 3,
                 },
                 animation: {
                   count: 0,

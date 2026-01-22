@@ -40,48 +40,38 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
         {/* Sparkles Background */}
         <div className="absolute inset-0 w-full h-full">
           <SparklesCore
             id="hero-sparkles"
             background="transparent"
-            minSize={0.4}
+            minSize={0.6}
             maxSize={1.4}
-            particleDensity={80}
+            particleDensity={100}
             className="w-full h-full"
-            particleColor="#71717a"
-            speed={2}
+            particleColor="#ffffff"
+            speed={3}
           />
         </div>
 
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background pointer-events-none" />
-
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <p className="text-primary font-medium mb-4 tracking-wide uppercase text-sm">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <p className="text-zinc-400 font-medium mb-4 tracking-wide uppercase text-sm">
             Activist & Advocate
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Andrew Douglas
-            <br />
-            <span className="text-muted-foreground">
-              Hartzler
-            </span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight text-white">
+            <span className="md:whitespace-nowrap">Andrew Douglas Hartzler</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Advocate, organizer, and MPA graduate student at UMKC based in Kansas City.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="#work"
-              className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-colors"
+              className="px-8 py-3 bg-white hover:bg-zinc-200 text-black rounded-full font-medium transition-colors"
             >
               See My Work
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-3 border border-border hover:bg-muted rounded-full font-medium transition-colors"
+              className="px-8 py-3 border border-zinc-600 hover:bg-zinc-900 text-white rounded-full font-medium transition-colors"
             >
               Get in Touch
             </Link>
@@ -91,7 +81,7 @@ export default function Home() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
           <svg
-            className="w-6 h-6 text-muted-foreground"
+            className="w-6 h-6 text-zinc-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

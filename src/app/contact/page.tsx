@@ -12,12 +12,7 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Whether you&apos;re a journalist, organization, fellow advocate, or
-            someone who wants to share their story&mdash;I&apos;d love to hear from
-            you.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -132,91 +127,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div>
-              <h2 className="text-xl font-semibold mb-4">What I&apos;m Available For</h2>
-              <ul className="space-y-2 text-muted-foreground">
-                <li className="flex items-center gap-2">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Media interviews & press inquiries
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Speaking engagements & panels
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Podcast appearances
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Advocacy collaborations
-                </li>
-                <li className="flex items-center gap-2">
-                  <svg
-                    className="w-5 h-5 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  Community partnerships
-                </li>
-              </ul>
-            </div>
           </div>
 
           {/* Contact Form */}

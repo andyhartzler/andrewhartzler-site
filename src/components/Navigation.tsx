@@ -1,21 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link
-            href="/"
-            className="text-lg font-semibold tracking-tight text-white hover:text-zinc-300 transition-colors"
-          >
-            Home
-          </Link>
+          {!isHome && (
+            <Link
+              href="/"
+              className="text-lg font-semibold tracking-tight text-white hover:text-zinc-300 transition-colors"
+            >
+              Home
+            </Link>
+          )}
+          {isHome && <div />}
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -80,6 +86,15 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden py-4 bg-black/90 backdrop-blur-sm -mx-6 px-6">
             <div className="flex flex-col gap-4">
+              {!isHome && (
+                <Link
+                  href="/"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </Link>
+              )}
               <Link
                 href="/#about"
                 className="text-zinc-400 hover:text-white transition-colors"

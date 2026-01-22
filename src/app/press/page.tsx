@@ -154,22 +154,22 @@ export default function PressPage() {
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all hover:bg-zinc-800/50 group"
+              className="block p-4 sm:p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all hover:bg-zinc-800/50 group"
             >
-              <div className="flex items-center gap-5">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
                 {/* Logo */}
-                <div className="flex-shrink-0 w-28 h-10 flex items-center justify-center">
+                <div className="flex-shrink-0 w-24 sm:w-28 h-8 sm:h-10 flex items-center">
                   <Image
                     src={item.logo}
                     alt={item.publication}
                     width={112}
                     height={40}
-                    className="object-contain max-h-10"
+                    className="object-contain max-h-8 sm:max-h-10"
                   />
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <p className="text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed line-clamp-2">
+                  <p className="text-sm sm:text-base text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed line-clamp-3 sm:line-clamp-2">
                     {item.title}
                   </p>
                 </div>

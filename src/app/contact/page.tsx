@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-24 pb-16 text-white">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
+        <div className="text-center mb-12 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Get in Touch</h1>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
@@ -23,11 +23,11 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a
                   href="mailto:andrew@hartzler.us"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/50 transition-colors group"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors group"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                     <svg
-                      className="w-5 h-5 text-primary"
+                      className="w-5 h-5 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -41,15 +41,15 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="text-sm text-zinc-400">Email</p>
                     <p className="font-medium">andrew@hartzler.us</p>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+                  <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
                     <svg
-                      className="w-5 h-5 text-primary"
+                      className="w-5 h-5 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
+                    <p className="text-sm text-zinc-400">Location</p>
                     <p className="font-medium">Kansas City, Missouri</p>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   href="https://instagram.com/andrewhartzler"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   href="https://tiktok.com/@andrewhartzler"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -113,7 +113,7 @@ export default function ContactPage() {
                   href="https://twitter.com/andyhartzler"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border hover:border-primary/50 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors"
                 >
                   <svg
                     className="w-5 h-5"
@@ -130,7 +130,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-2xl bg-card border border-border">
+          <div className="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800">
             <h2 className="text-xl font-semibold mb-6">Send a Message</h2>
             <form
               action={`https://formspree.io/f/xyzgkqwl`}
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-zinc-700 focus:border-white focus:outline-none transition-colors text-white placeholder-zinc-500"
                   placeholder="Your name"
                 />
               </div>
@@ -165,7 +165,7 @@ export default function ContactPage() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-zinc-700 focus:border-white focus:outline-none transition-colors text-white placeholder-zinc-500"
                   placeholder="your@email.com"
                 />
               </div>
@@ -179,7 +179,7 @@ export default function ContactPage() {
                 <select
                   id="subject"
                   name="subject"
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-zinc-700 focus:border-white focus:outline-none transition-colors text-white"
                 >
                   <option value="general">General Inquiry</option>
                   <option value="media">Media / Press</option>
@@ -200,17 +200,17 @@ export default function ContactPage() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg bg-background border border-input focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-black border border-zinc-700 focus:border-white focus:outline-none transition-colors resize-none text-white placeholder-zinc-500"
                   placeholder="How can I help you?"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-colors"
+                className="w-full py-3 bg-white hover:bg-zinc-200 text-black rounded-lg font-medium transition-colors"
               >
                 Send Message
               </button>
-              <p className="text-xs text-muted-foreground text-center">
+              <p className="text-xs text-zinc-500 text-center">
                 I typically respond within 24-48 hours.
               </p>
             </form>

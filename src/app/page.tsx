@@ -38,9 +38,9 @@ const pressFeatures = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Sparkles Background */}
         <div className="absolute inset-0 w-full h-full">
           <SparklesCore
@@ -59,7 +59,7 @@ export default function Home() {
           <p className="text-zinc-400 font-medium mb-4 tracking-wide uppercase text-sm">
             Activist & Advocate
           </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight text-white">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             <span className="md:whitespace-nowrap">Andrew Douglas Hartzler</span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -71,7 +71,7 @@ export default function Home() {
             </Link>
             <Link
               href="/contact"
-              className="px-8 py-3 border border-zinc-600 hover:bg-zinc-900 text-white rounded-full font-medium transition-colors"
+              className="px-8 py-3 border border-zinc-600 hover:bg-zinc-900 rounded-full font-medium transition-colors"
             >
               Get in Touch
             </Link>
@@ -97,16 +97,16 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-muted/30">
+      <section id="about" className="py-24 bg-zinc-950">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               About Me
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+            <p className="text-zinc-400 text-lg leading-relaxed mb-6">
               I&apos;m currently pursuing my Master of Public Administration at the University of Missouri-Kansas City while working on advocacy and organizing projects. Based in Kansas City, I&apos;m passionate about creating meaningful change through education, policy, and community building.
             </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <p className="text-zinc-400 text-lg leading-relaxed">
               My work spans political organizing, public speaking, and media engagement. I&apos;ve been fortunate to have my voice amplified through major news outlets and to collaborate with organizations working toward a more just society.
             </p>
           </div>
@@ -120,17 +120,17 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               What I Do
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-zinc-400 max-w-2xl mx-auto">
               Combining education, advocacy, and organizing to drive meaningful impact.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Graduate Studies Card */}
-            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
                 <svg
-                  className="w-6 h-6 text-primary"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -146,16 +146,16 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">
                 Public Administration
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-zinc-400 text-sm leading-relaxed">
                 Pursuing my MPA at UMKC, focusing on public policy, governance, and creating effective systems for positive community impact.
               </p>
             </div>
 
             {/* Advocacy Card */}
-            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
                 <svg
-                  className="w-6 h-6 text-primary"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -171,14 +171,14 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">
                 Advocacy & Policy
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-zinc-400 text-sm leading-relaxed">
                 Working on civil rights issues and education policy reform. Part of ongoing efforts challenging discriminatory practices in higher education.
               </p>
               <a
                 href="https://thereap.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-primary text-sm mt-4 hover:underline"
+                className="inline-flex items-center gap-1 text-white text-sm mt-4 hover:underline"
               >
                 Learn about REAP
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -188,10 +188,10 @@ export default function Home() {
             </div>
 
             {/* Political Organizing Card */}
-            <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors group">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
                 <svg
-                  className="w-6 h-6 text-primary"
+                  className="w-6 h-6 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -207,14 +207,14 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-2">
                 Political Organizing
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-zinc-400 text-sm leading-relaxed">
                 Active with Missouri Young Democrats, working to elect progressive candidates and shape policies at the state and local level.
               </p>
               <a
                 href="https://moyoungdemocrats.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-primary text-sm mt-4 hover:underline"
+                className="inline-flex items-center gap-1 text-white text-sm mt-4 hover:underline"
               >
                 Get involved
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -227,13 +227,13 @@ export default function Home() {
       </section>
 
       {/* Press Section */}
-      <section id="press" className="py-24 bg-muted/30">
+      <section id="press" className="py-24 bg-zinc-950">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Featured In
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-zinc-400 max-w-2xl mx-auto">
               My work has been covered by major outlets nationwide.
             </p>
           </div>
@@ -242,19 +242,19 @@ export default function Home() {
             {pressFeatures.map((press, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/50 transition-all hover:scale-[1.02] cursor-pointer group"
+                className="p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all hover:scale-[1.02] cursor-pointer group"
               >
-                <p className="text-2xl font-bold text-primary mb-1">
+                <p className="text-2xl font-bold text-white mb-1">
                   {press.outlet}
                 </p>
-                <p className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                <p className="text-sm text-zinc-500 group-hover:text-zinc-300 transition-colors">
                   {press.title}
                 </p>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-muted-foreground mt-8 text-sm">
+          <p className="text-center text-zinc-500 mt-8 text-sm">
             Also featured in: The Advocate, Buzzfeed, Business Insider,
             Telemundo, Kansas City Star, and more.
           </p>
@@ -267,12 +267,12 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Let&apos;s Connect
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
             Interested in collaborating, speaking engagements, or media inquiries? I&apos;d love to hear from you.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-medium transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-zinc-200 text-black rounded-full font-medium transition-colors"
           >
             Get in Touch
             <svg

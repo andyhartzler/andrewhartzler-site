@@ -32,7 +32,7 @@ export default function Navigation() {
               Advocacy
             </Link>
             <Link
-              href="/#press"
+              href="/press"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Press
@@ -95,7 +95,7 @@ export default function Navigation() {
                 Advocacy
               </Link>
               <Link
-                href="/#press"
+                href="/press"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 onClick={() => setIsOpen(false)}
               >

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import AnimatedPressCard from "@/components/AnimatedPressCard";
 
 export const metadata: Metadata = {
   title: "Press | Andrew Douglas Hartzler",
@@ -149,48 +149,14 @@ export default function PressPage() {
         {/* Press Grid */}
         <div className="space-y-4">
           {pressItems.map((item, index) => (
-            <a
+            <AnimatedPressCard
               key={index}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-4 sm:p-6 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all hover:bg-zinc-800/50 group"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
-                {/* Logo */}
-                <div className="flex-shrink-0 w-24 sm:w-28 h-8 sm:h-10 flex items-center">
-                  <Image
-                    src={item.logo}
-                    alt={item.publication}
-                    width={112}
-                    height={40}
-                    className="object-contain max-h-8 sm:max-h-10"
-                  />
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm sm:text-base text-zinc-400 group-hover:text-zinc-300 transition-colors leading-relaxed line-clamp-3 sm:line-clamp-2">
-                    {item.title}
-                  </p>
-                </div>
-
-                <div className="flex-shrink-0 hidden sm:block">
-                  <svg
-                    className="w-5 h-5 text-zinc-600 group-hover:text-white transition-colors"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </a>
+              publication={item.publication}
+              title={item.title}
+              url={item.url}
+              logo={item.logo}
+              index={index}
+            />
           ))}
         </div>
 

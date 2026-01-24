@@ -1,46 +1,34 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Dock, DockItem } from "./Dock";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className="absolute top-0 left-0 right-0 z-40 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          {!isHome && (
-            <Link
-              href="/"
-              className="text-lg font-semibold tracking-tight text-white hover:text-zinc-300 transition-colors"
-            >
-              Home
-            </Link>
-          )}
-          {isHome && <div />}
+        <div className="flex items-center justify-end h-16">
 
           {/* Desktop Navigation - Dock */}
           <div className="hidden md:block">
             <Dock magnification={1.15} distance={80}>
               <DockItem>
                 <Link
-                  href="/#about"
+                  href="/"
                   className="text-sm text-zinc-400 hover:text-white transition-colors"
                 >
-                  About
+                  Home
                 </Link>
               </DockItem>
               <DockItem>
                 <Link
-                  href="/#work"
+                  href="/projects"
                   className="text-sm text-zinc-400 hover:text-white transition-colors"
                 >
-                  Work
+                  Projects
                 </Link>
               </DockItem>
               <DockItem>
@@ -97,28 +85,19 @@ export default function Navigation() {
         {isOpen && (
           <div className="md:hidden py-4 bg-black/90 backdrop-blur-sm -mx-6 px-6">
             <div className="flex flex-col gap-4">
-              {!isHome && (
-                <Link
-                  href="/"
-                  className="text-zinc-400 hover:text-white transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-              )}
               <Link
-                href="/#about"
+                href="/"
                 className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                About
+                Home
               </Link>
               <Link
-                href="/#work"
+                href="/projects"
                 className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Work
+                Projects
               </Link>
               <Link
                 href="/press"

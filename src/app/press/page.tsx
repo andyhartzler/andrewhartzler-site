@@ -139,7 +139,7 @@ const pressItems = [
 
 export default function PressPage() {
   return (
-    <main className="min-h-screen bg-black text-white pt-24 pb-16">
+    <main className="min-h-screen text-white pt-24 pb-16">
       <div className="max-w-5xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

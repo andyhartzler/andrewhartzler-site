@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Dock, DockItem } from "./Dock";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,32 +24,42 @@ export default function Navigation() {
           )}
           {isHome && <div />}
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/#about"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/#advocacy"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Advocacy
-            </Link>
-            <Link
-              href="/press"
-              className="text-sm text-zinc-400 hover:text-white transition-colors"
-            >
-              Press
-            </Link>
-            <Link
-              href="/contact"
-              className="text-sm px-4 py-2 bg-white hover:bg-zinc-200 text-black rounded-full transition-colors"
-            >
-              Contact
-            </Link>
+          {/* Desktop Navigation - Dock */}
+          <div className="hidden md:block">
+            <Dock magnification={1.15} distance={80}>
+              <DockItem>
+                <Link
+                  href="/#about"
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  About
+                </Link>
+              </DockItem>
+              <DockItem>
+                <Link
+                  href="/#work"
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  Work
+                </Link>
+              </DockItem>
+              <DockItem>
+                <Link
+                  href="/press"
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  Press
+                </Link>
+              </DockItem>
+              <DockItem>
+                <Link
+                  href="/contact"
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </DockItem>
+            </Dock>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,11 +114,11 @@ export default function Navigation() {
                 About
               </Link>
               <Link
-                href="/#advocacy"
+                href="/#work"
                 className="text-zinc-400 hover:text-white transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Advocacy
+                Work
               </Link>
               <Link
                 href="/press"

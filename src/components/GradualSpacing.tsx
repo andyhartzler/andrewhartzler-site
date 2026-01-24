@@ -22,21 +22,38 @@ function GradualSpacing({
   },
   className,
 }: GradualSpacingProps) {
+  const words = text.split(" ");
+
+  // Pre-calculate delays for each character
+  let globalIndex = 0;
+  const wordData = words.map((word) => {
+    const chars = word.split("").map((char) => ({
+      char,
+      delay: globalIndex++ * delayMultiple,
+    }));
+    globalIndex++; // Account for space between words
+    return chars;
+  });
+
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center gap-x-3 md:gap-x-4">
       <AnimatePresence>
-        {text.split("").map((char, i) => (
-          <motion.span
-            key={i}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={framerProps}
-            transition={{ duration, delay: i * delayMultiple }}
-            className={cn("drop-shadow-sm", className)}
-          >
-            {char === " " ? <span>&nbsp;</span> : char}
-          </motion.span>
+        {wordData.map((chars, wordIndex) => (
+          <span key={wordIndex} className="inline-flex whitespace-nowrap">
+            {chars.map((item, charIndex) => (
+              <motion.span
+                key={`${wordIndex}-${charIndex}`}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={framerProps}
+                transition={{ duration, delay: item.delay }}
+                className={cn("drop-shadow-sm", className)}
+              >
+                {item.char}
+              </motion.span>
+            ))}
+          </span>
         ))}
       </AnimatePresence>
     </div>

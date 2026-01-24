@@ -1,25 +1,19 @@
 "use client";
 
-import { AnimatePresence, motion, Variants } from "framer-motion";
-
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface GradualSpacingProps {
   text: string;
   duration?: number;
   delayMultiple?: number;
-  framerProps?: Variants;
   className?: string;
 }
 
 function GradualSpacing({
   text,
-  duration = 0.5,
-  delayMultiple = 0.04,
-  framerProps = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-  },
+  duration = 0.3,
+  delayMultiple = 0.03,
   className,
 }: GradualSpacingProps) {
   const words = text.split(" ");
@@ -36,27 +30,27 @@ function GradualSpacing({
   });
 
   return (
-    <div className="flex flex-wrap justify-center gap-x-3 md:gap-x-4">
-      <AnimatePresence>
-        {wordData.map((chars, wordIndex) => (
-          <span key={wordIndex} className="inline-flex whitespace-nowrap">
-            {chars.map((item, charIndex) => (
-              <motion.span
-                key={`${wordIndex}-${charIndex}`}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={framerProps}
-                transition={{ duration, delay: item.delay }}
-                className={cn("drop-shadow-sm", className)}
-              >
-                {item.char}
-              </motion.span>
-            ))}
-          </span>
-        ))}
-      </AnimatePresence>
-    </div>
+    <h1 className="flex flex-wrap md:flex-nowrap justify-center gap-x-3 md:gap-x-5 mb-8 leading-tight">
+      {wordData.map((chars, wordIndex) => (
+        <span key={wordIndex} className="inline-flex whitespace-nowrap">
+          {chars.map((item, charIndex) => (
+            <motion.span
+              key={`${wordIndex}-${charIndex}`}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration,
+                delay: item.delay,
+                ease: "easeOut"
+              }}
+              className={cn("drop-shadow-sm", className)}
+            >
+              {item.char}
+            </motion.span>
+          ))}
+        </span>
+      ))}
+    </h1>
   );
 }
 

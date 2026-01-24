@@ -12,13 +12,12 @@ export default function Home() {
             <p className="text-zinc-400 font-medium mb-4 tracking-wide uppercase text-sm">
               Strategist, Organizer, Creator
             </p>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-              <GradualSpacing
-                text="Andrew Douglas Hartzler"
-                className="text-5xl md:text-7xl lg:text-8xl font-bold"
-                delayMultiple={0.04}
-              />
-            </h1>
+            <GradualSpacing
+              text="Andrew Douglas Hartzler"
+              className="text-5xl md:text-7xl lg:text-8xl font-bold"
+              delayMultiple={0.03}
+              duration={0.3}
+            />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#work"

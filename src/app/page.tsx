@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { GradualSpacing } from "@/components/GradualSpacing";
 
 export default function Home() {
   return (
@@ -10,7 +13,11 @@ export default function Home() {
               Strategist, Organizer, Creator
             </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-              <span className="md:whitespace-nowrap">Andrew Douglas Hartzler</span>
+              <GradualSpacing
+                text="Andrew Douglas Hartzler"
+                className="text-5xl md:text-7xl lg:text-8xl font-bold"
+                delayMultiple={0.04}
+              />
             </h1>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

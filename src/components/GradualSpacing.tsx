@@ -1,53 +1,55 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 interface GradualSpacingProps {
   text: string;
-  duration?: number;
   delayMultiple?: number;
   className?: string;
 }
 
 function GradualSpacing({
   text,
-  duration = 0.3,
-  delayMultiple = 0.03,
+  delayMultiple = 30,
   className,
 }: GradualSpacingProps) {
-  const words = text.split(" ");
+  const [visibleCount, setVisibleCount] = useState(0);
+  const chars = text.split("");
 
-  // Pre-calculate delays for each character
-  let globalIndex = 0;
-  const wordData = words.map((word) => {
-    const chars = word.split("").map((char) => ({
-      char,
-      delay: globalIndex++ * delayMultiple,
-    }));
-    globalIndex++; // Account for space between words
-    return chars;
-  });
+  useEffect(() => {
+    if (visibleCount < chars.length) {
+      const timer = setTimeout(() => {
+        setVisibleCount((c) => c + 1);
+      }, delayMultiple);
+      return () => clearTimeout(timer);
+    }
+  }, [visibleCount, chars.length, delayMultiple]);
+
+  const words = text.split(" ");
+  let charIndex = 0;
 
   return (
     <h1 className="flex flex-wrap md:flex-nowrap justify-center gap-x-3 md:gap-x-5 mb-8 leading-tight">
-      {wordData.map((chars, wordIndex) => (
+      {words.map((word, wordIndex) => (
         <span key={wordIndex} className="inline-flex whitespace-nowrap">
-          {chars.map((item, charIndex) => (
-            <motion.span
-              key={`${wordIndex}-${charIndex}`}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration,
-                delay: item.delay,
-                ease: "easeOut"
-              }}
-              className={cn("drop-shadow-sm", className)}
-            >
-              {item.char}
-            </motion.span>
-          ))}
+          {word.split("").map((char, i) => {
+            const currentIndex = charIndex++;
+            const isVisible = currentIndex < visibleCount;
+            return (
+              <span
+                key={i}
+                className={cn(
+                  "transition-all duration-300",
+                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2",
+                  className
+                )}
+              >
+                {char}
+              </span>
+            );
+          })}
+          {wordIndex < words.length - 1 && (() => { charIndex++; return null; })()}
         </span>
       ))}
     </h1>

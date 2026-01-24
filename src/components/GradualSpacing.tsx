@@ -1,31 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
 
 interface GradualSpacingProps {
   text: string;
-  delayMultiple?: number;
   className?: string;
 }
 
-function GradualSpacing({
-  text,
-  delayMultiple = 30,
-  className,
-}: GradualSpacingProps) {
-  const [visibleCount, setVisibleCount] = useState(0);
-  const chars = text.split("");
-
-  useEffect(() => {
-    if (visibleCount < chars.length) {
-      const timer = setTimeout(() => {
-        setVisibleCount((c) => c + 1);
-      }, delayMultiple);
-      return () => clearTimeout(timer);
-    }
-  }, [visibleCount, chars.length, delayMultiple]);
-
+function GradualSpacing({ text, className }: GradualSpacingProps) {
   const words = text.split(" ");
   let charIndex = 0;
 
@@ -34,22 +16,21 @@ function GradualSpacing({
       {words.map((word, wordIndex) => (
         <span key={wordIndex} className="inline-flex whitespace-nowrap">
           {word.split("").map((char, i) => {
-            const currentIndex = charIndex++;
-            const isVisible = currentIndex < visibleCount;
+            const delay = charIndex * 0.04;
+            charIndex++;
             return (
               <span
                 key={i}
-                className={cn(
-                  "transition-all duration-300",
-                  isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2",
-                  className
-                )}
+                className={cn("animate-fade-in", className)}
+                style={{
+                  animationDelay: `${delay}s`,
+                  opacity: 0,
+                }}
               >
                 {char}
               </span>
             );
           })}
-          {wordIndex < words.length - 1 && (() => { charIndex++; return null; })()}
         </span>
       ))}
     </h1>

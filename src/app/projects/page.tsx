@@ -108,7 +108,7 @@ export default function ProjectsPage() {
               Missouri Young Democrats
             </h3>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-              Active with Missouri Young Democrats, working to elect progressive candidates and shape policies at the state and local level.
+              Founder and President. Relaunched the statewide organization in July 2025 after seven years of dormancy. Within six months, built a coalition of nearly 400 members spanning more than half of Missouri&apos;s 114 counties and reached nearly 1 million impressions across social media.
             </p>
             <span className="inline-flex items-center gap-1 text-white text-sm group-hover:underline">
               Get involved

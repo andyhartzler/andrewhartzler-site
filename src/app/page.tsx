@@ -15,8 +15,7 @@ export default function Home() {
             <GradualSpacing
               text="Andrew Douglas Hartzler"
               className="text-5xl md:text-7xl lg:text-8xl font-bold"
-              delayMultiple={0.03}
-              duration={0.3}
+              delayMultiple={30}
             />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

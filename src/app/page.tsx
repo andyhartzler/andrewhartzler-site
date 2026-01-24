@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { GradualSpacing } from "@/components/GradualSpacing";
+import SparkleReveal from "@/components/SparkleReveal";
 
 export default function Home() {
   return (
@@ -54,15 +55,21 @@ export default function Home() {
         <section id="about" className="py-24">
           <div className="max-w-4xl mx-auto px-6">
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                About Me
-              </h2>
-              <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                I&apos;m currently pursuing my Master of Public Administration at the University of Missouri-Kansas City while working on advocacy and organizing projects. Based in Kansas City, I&apos;m passionate about creating meaningful change through education, policy, and community building.
-              </p>
-              <p className="text-zinc-400 text-lg leading-relaxed">
-                My work spans political organizing, public speaking, and media engagement. I&apos;ve been fortunate to have my voice amplified through major news outlets and to collaborate with organizations working toward a more just society.
-              </p>
+              <SparkleReveal sparkleCount={40}>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  About Me
+                </h2>
+              </SparkleReveal>
+              <SparkleReveal sparkleCount={80} delay={0.2}>
+                <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+                  I&apos;m currently pursuing my Master of Public Administration at the University of Missouri-Kansas City while working on advocacy and organizing projects. Based in Kansas City, I&apos;m passionate about creating meaningful change through education, policy, and community building.
+                </p>
+              </SparkleReveal>
+              <SparkleReveal sparkleCount={80} delay={0.3}>
+                <p className="text-zinc-400 text-lg leading-relaxed">
+                  My work spans political organizing, public speaking, and media engagement. I&apos;ve been fortunate to have my voice amplified through major news outlets and to collaborate with organizations working toward a more just society.
+                </p>
+              </SparkleReveal>
             </div>
           </div>
         </section>
@@ -71,12 +78,16 @@ export default function Home() {
         <section id="work" className="py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                What I Do
-              </h2>
-              <p className="text-zinc-400 max-w-2xl mx-auto">
-                Combining education, advocacy, and organizing to drive meaningful impact.
-              </p>
+              <SparkleReveal sparkleCount={40}>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  What I Do
+                </h2>
+              </SparkleReveal>
+              <SparkleReveal sparkleCount={50} delay={0.1}>
+                <p className="text-zinc-400 max-w-2xl mx-auto">
+                  Combining education, advocacy, and organizing to drive meaningful impact.
+                </p>
+              </SparkleReveal>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -184,12 +195,16 @@ export default function Home() {
         <section id="press" className="py-24">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Featured In
-              </h2>
-              <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-                My work has been covered by major outlets nationwide.
-              </p>
+              <SparkleReveal sparkleCount={40}>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Featured In
+                </h2>
+              </SparkleReveal>
+              <SparkleReveal sparkleCount={50} delay={0.1}>
+                <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
+                  My work has been covered by major outlets nationwide.
+                </p>
+              </SparkleReveal>
             </div>
 
             {/* Featured Outlets Logos/Names */}
@@ -228,12 +243,16 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-24">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Let&apos;s Connect
-            </h2>
-            <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
-              Interested in collaborating, speaking engagements, or media inquiries? I&apos;d love to hear from you.
-            </p>
+            <SparkleReveal sparkleCount={40}>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Let&apos;s Connect
+              </h2>
+            </SparkleReveal>
+            <SparkleReveal sparkleCount={60} delay={0.1}>
+              <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
+                Interested in collaborating, speaking engagements, or media inquiries? I&apos;d love to hear from you.
+              </p>
+            </SparkleReveal>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-zinc-200 text-black rounded-full font-medium transition-colors"

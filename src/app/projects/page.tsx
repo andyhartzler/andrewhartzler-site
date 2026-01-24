@@ -72,7 +72,7 @@ export default function ProjectsPage() {
               REAP - Religious Exemption Accountability Project
             </h3>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-              Plaintiff in a landmark class-action lawsuit fighting for Title IX protections for over 100,000 LGBTQ+ students at 200+ federally funded religious universities. Advocating to end discriminatory practices that allow schools to deny admission, expel, or punish students based on sexual orientation or gender identity.
+              Plaintiff in a landmark class-action lawsuit fighting for Title IX protections for over 100,000 LGBTQ+ students at 200+ federally funded religious universities. The Ninth Circuit Court of Appeals ruled against us in August 2024, but the fight for equal protections continues.
             </p>
             <span className="inline-flex items-center gap-1 text-white text-sm group-hover:underline">
               Learn more

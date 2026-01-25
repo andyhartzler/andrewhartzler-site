@@ -8,13 +8,11 @@ export const metadata: Metadata = {
 
 export default function KCIdentitiesPage() {
   return (
-    <main className="min-h-screen w-full">
-      <iframe
-        src="https://kc-identities.vercel.app"
-        className="w-full h-screen border-0"
-        title="Kansas City Identities"
-        allow="autoplay"
-      />
-    </main>
+    <iframe
+      src="https://kc-identities.vercel.app"
+      className="w-full h-full border-0"
+      title="Kansas City Identities"
+      allow="autoplay"
+    />
   );
 }

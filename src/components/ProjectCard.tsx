@@ -12,8 +12,8 @@ interface ProjectCardProps {
 
 const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) => {
   const cardContent = (
-    <div className="group cursor-pointer transform transition-all duration-500 hover:scale-105">
-      <Card className="text-white rounded-2xl border border-white/10 bg-gradient-to-br from-[#010101] via-[#090909] to-[#010101] shadow-2xl relative backdrop-blur-xl overflow-hidden hover:border-white/25 hover:shadow-white/5 hover:shadow-3xl h-full">
+    <div className="group cursor-pointer transform transition-all duration-500 hover:scale-105 h-full">
+      <Card className="text-white rounded-2xl border border-white/10 bg-gradient-to-br from-black/70 via-black/50 to-black/70 shadow-2xl relative backdrop-blur-sm overflow-hidden hover:border-white/25 hover:shadow-white/5 hover:shadow-3xl h-full">
         {/* Background effects */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-white/10 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
@@ -22,7 +22,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) =
         </div>
 
         {/* Card content */}
-        <div className="p-8 relative z-10 flex flex-col items-center text-center">
+        <div className="p-8 relative z-10 flex flex-col items-center text-center h-full">
           {/* Icon container */}
           <div className="relative mb-6">
             {/* Pulse ring - only animates once on hover */}
@@ -50,14 +50,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) =
           </div>
 
           {/* Decorative line */}
-          <div className="mt-6 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent rounded-full transform group-hover:w-1/2 group-hover:h-1 transition-all duration-500"></div>
-
-          {/* Animated dots */}
-          <div className="flex space-x-2 mt-4 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-            <div className="w-2 h-2 bg-white rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-            <div className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-          </div>
+          <div className="mt-auto pt-6 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent rounded-full transform group-hover:w-1/2 group-hover:h-1 transition-all duration-500"></div>
         </div>
 
         {/* Corner accents */}
@@ -69,13 +62,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) =
 
   if (href) {
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className="block">
+      <a href={href} target="_blank" rel="noopener noreferrer" className="block h-full">
         {cardContent}
       </a>
     );
   }
 
-  return cardContent;
+  return <div className="h-full">{cardContent}</div>;
 };
 
 export default ProjectCard;

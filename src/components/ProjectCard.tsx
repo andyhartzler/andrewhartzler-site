@@ -18,8 +18,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) =
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-white/10 opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
           <div className="absolute -bottom-20 -left-20 w-48 h-48 rounded-full bg-gradient-to-tr from-white/10 to-transparent blur-3xl opacity-30 group-hover:opacity-50 transform group-hover:scale-110 transition-all duration-700"></div>
-          <div className="absolute top-10 left-10 w-16 h-16 rounded-full bg-white/5 blur-xl animate-ping"></div>
-          <div className="absolute bottom-16 right-16 w-12 h-12 rounded-full bg-white/5 blur-lg animate-ping"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-[-200%] transition-transform duration-1000"></div>
         </div>
 
@@ -27,8 +25,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, icon, href }) =
         <div className="p-8 relative z-10 flex flex-col items-center text-center">
           {/* Icon container */}
           <div className="relative mb-6">
-            <div className="absolute inset-0 rounded-full border-2 border-white/20 animate-ping"></div>
-            <div className="absolute inset-0 rounded-full border border-white/10 animate-pulse"></div>
+            {/* Pulse ring - only animates once on hover */}
+            <div
+              className="absolute inset-0 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 group-hover:animate-[ping_0.75s_ease-out_forwards]"
+            ></div>
 
             <div className="p-6 rounded-full backdrop-blur-lg border border-white/20 bg-gradient-to-br from-black/80 to-black/60 shadow-2xl transform group-hover:scale-110 transition-all duration-500 hover:shadow-white/20">
               <div className="transform group-hover:rotate-12 transition-transform duration-700">

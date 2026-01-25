@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { useMemo } from "react";
 
 interface GradualSpacingProps {
   text: string;
@@ -8,29 +9,34 @@ interface GradualSpacingProps {
 }
 
 function GradualSpacing({ text, className }: GradualSpacingProps) {
-  const words = text.split(" ");
-  let charIndex = 0;
+  const wordData = useMemo(() => {
+    const words = text.split(" ");
+    let globalIndex = 0;
+
+    return words.map((word) => ({
+      word,
+      chars: word.split("").map((char) => ({
+        char,
+        delay: globalIndex++ * 0.04,
+      })),
+    }));
+  }, [text]);
 
   return (
     <h1 className="flex flex-wrap md:flex-nowrap justify-center gap-x-3 md:gap-x-5 mb-8 leading-tight">
-      {words.map((word, wordIndex) => (
+      {wordData.map((wordObj, wordIndex) => (
         <span key={wordIndex} className="inline-flex whitespace-nowrap">
-          {word.split("").map((char, i) => {
-            const delay = charIndex * 0.04;
-            charIndex++;
-            return (
-              <span
-                key={i}
-                className={cn("animate-fade-in", className)}
-                style={{
-                  animationDelay: `${delay}s`,
-                  opacity: 0,
-                }}
-              >
-                {char}
-              </span>
-            );
-          })}
+          {wordObj.chars.map((charObj, charIndex) => (
+            <span
+              key={charIndex}
+              className={cn("animate-fade-in", className)}
+              style={{
+                animationDelay: `${charObj.delay}s`,
+              }}
+            >
+              {charObj.char}
+            </span>
+          ))}
         </span>
       ))}
     </h1>

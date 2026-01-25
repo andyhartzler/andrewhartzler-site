@@ -86,24 +86,26 @@ export default function Home() {
                   Combining education, advocacy, and organizing to drive meaningful impact.
                 </p>
               </SparkleReveal>
-              <MagnetButton href="/projects">
-                <span className="inline-flex items-center gap-2 px-10 py-5 bg-white hover:bg-zinc-200 text-black rounded-full font-semibold text-lg transition-colors">
-                  View My Projects
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
-              </MagnetButton>
+              <SparkleReveal sparkleCount={40} delay={0.2}>
+                <MagnetButton href="/projects">
+                  <span className="inline-flex items-center gap-2 px-10 py-5 bg-white hover:bg-zinc-200 text-black rounded-full font-semibold text-lg transition-colors">
+                    View My Projects
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </span>
+                </MagnetButton>
+              </SparkleReveal>
             </div>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
   title: "Projects | Andrew Douglas Hartzler",
@@ -20,12 +21,14 @@ export default function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Graduate Studies Card */}
-          <div className="p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-zinc-600 transition-colors group">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+          <ProjectCard
+            title="Public Administration"
+            description="Pursuing my MPA at UMKC, focusing on public policy, governance, and creating effective systems for positive community impact."
+            icon={
               <svg
-                className="w-6 h-6 text-white"
+                className="w-8 h-8 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -37,25 +40,17 @@ export default function ProjectsPage() {
                   d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
                 />
               </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              Public Administration
-            </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Pursuing my MPA at UMKC, focusing on public policy, governance, and creating effective systems for positive community impact.
-            </p>
-          </div>
+            }
+          />
 
           {/* REAP Card */}
-          <a
+          <ProjectCard
+            title="REAP"
+            description="Plaintiff in a landmark class-action lawsuit fighting for Title IX protections for over 100,000 LGBTQ+ students at 200+ federally funded religious universities."
             href="https://web.archive.org/web/20250417073403/https://www.thereap.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-zinc-600 transition-colors group block"
-          >
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+            icon={
               <svg
-                className="w-6 h-6 text-white"
+                className="w-8 h-8 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -67,25 +62,17 @@ export default function ProjectsPage() {
                   d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
                 />
               </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              REAP - Religious Exemption Accountability Project
-            </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Plaintiff in a landmark class-action lawsuit fighting for Title IX protections for over 100,000 LGBTQ+ students at 200+ federally funded religious universities. The Ninth Circuit Court of Appeals ruled against us in August 2024, but the fight for equal protections continues.
-            </p>
-          </a>
+            }
+          />
 
           {/* Missouri Young Democrats Card */}
-          <a
+          <ProjectCard
+            title="Missouri Young Democrats"
+            description="Founder and President. Relaunched the statewide organization in July 2025 after seven years of dormancy. Built a coalition of nearly 400 members spanning more than half of Missouri's 114 counties."
             href="https://moyoungdemocrats.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-zinc-600 transition-colors group block"
-          >
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
+            icon={
               <svg
-                className="w-6 h-6 text-white"
+                className="w-8 h-8 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -97,40 +84,48 @@ export default function ProjectsPage() {
                   d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              Missouri Young Democrats
-            </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Founder and President. Relaunched the statewide organization in July 2025 after seven years of dormancy. Within six months, built a coalition of nearly 400 members spanning more than half of Missouri&apos;s 114 counties and reached nearly 1 million impressions across social media.
-            </p>
-          </a>
+            }
+          />
+        </div>
 
-          {/* Content Creation Card */}
-          <div className="p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-zinc-600 transition-colors group">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              Content Creation
-            </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Creating educational and advocacy content on TikTok and other platforms, sharing stories about religious trauma, LGBTQ+ rights, and political engagement.
+        {/* Misc Section */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Misc</h2>
+            <p className="text-zinc-400 max-w-2xl mx-auto">
+              Other projects and creative endeavors.
             </p>
           </div>
 
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Kansas City Identities */}
+            <ProjectCard
+              title="Kansas City Identities"
+              description="A photography and storytelling project celebrating the diverse identities of Kansas City residents. Inspired by the San Francisco Identities project, this initiative captures authentic portraits and personal narratives that showcase the rich tapestry of our community."
+              href="/project/kc-identities"
+              icon={
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              }
+            />
+          </div>
         </div>
 
         {/* Back to Home */}

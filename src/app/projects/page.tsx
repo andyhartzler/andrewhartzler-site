@@ -71,15 +71,9 @@ export default function ProjectsPage() {
             <h3 className="text-xl font-semibold mb-2">
               REAP - Religious Exemption Accountability Project
             </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+            <p className="text-zinc-400 text-sm leading-relaxed">
               Plaintiff in a landmark class-action lawsuit fighting for Title IX protections for over 100,000 LGBTQ+ students at 200+ federally funded religious universities. The Ninth Circuit Court of Appeals ruled against us in August 2024, but the fight for equal protections continues.
             </p>
-            <span className="inline-flex items-center gap-1 text-white text-sm group-hover:underline">
-              Learn more
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
           </a>
 
           {/* Missouri Young Democrats Card */}
@@ -107,15 +101,9 @@ export default function ProjectsPage() {
             <h3 className="text-xl font-semibold mb-2">
               Missouri Young Democrats
             </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
+            <p className="text-zinc-400 text-sm leading-relaxed">
               Founder and President. Relaunched the statewide organization in July 2025 after seven years of dormancy. Within six months, built a coalition of nearly 400 members spanning more than half of Missouri&apos;s 114 counties and reached nearly 1 million impressions across social media.
             </p>
-            <span className="inline-flex items-center gap-1 text-white text-sm group-hover:underline">
-              Get involved
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
           </a>
 
           {/* Content Creation Card */}
@@ -143,30 +131,6 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          {/* Public Speaking Card */}
-          <div className="p-6 rounded-2xl bg-zinc-900/80 backdrop-blur-sm border border-zinc-800 hover:border-zinc-600 transition-colors group">
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-4 group-hover:bg-white/20 transition-colors">
-              <svg
-                className="w-6 h-6 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-                />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">
-              Public Speaking
-            </h3>
-            <p className="text-zinc-400 text-sm leading-relaxed">
-              Speaking at events, conferences, and media appearances about LGBTQ+ advocacy, religious exemptions in education, and political organizing.
-            </p>
-          </div>
         </div>
 
         {/* Back to Home */}
